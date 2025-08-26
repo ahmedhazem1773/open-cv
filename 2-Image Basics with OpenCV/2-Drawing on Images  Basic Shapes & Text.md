@@ -5,7 +5,7 @@ blank_img = np.zeros(shape=(512,512,3),dtype=np.int16)
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figur](Figur.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figur.png]]
 3. ممكن اعملها بطريقة تانية لو عايزها حجم صورة معينة عن طريق func اسمها `np.full`
 4. هي بتاخد الابعاد فا هنباصي shape  بتاع الصورة الصليةو بعد كده  القيم  هنملاها ب0  الي هو الاs,] و بعد كده نوع الالوان هنختار `unit8` كده بقت خلفية بيضاء من 3channels  كلها 0 
 ```python
@@ -31,14 +31,14 @@ cv2.rectangle(blank_img,pt1=(384,45),pt2=(500,128),color=(0,0,255),thickness=6) 
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_3](Figure_3.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_3.png]]
 ```python
 blank_img = np.zeros(shape=(512,512,3),dtype=np.int16)
 cv2.rectangle(blank_img,pt1=(300,45),pt2=(416,128),color=(0,0,255),thickness=-1)
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_6](Figure_6.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_6.png]]
 4. تقدر كمان تطبقها اكتر مرة  و هي كده كده بتحفظ التغيرات اول باول و مش شرط التغيرات تكون ورا بعض لا عادي ممكن يكون في النص ما بينهم اكواد بس طبعا هتطبق علي لما يجي دورها في flow 
 ```python
 blank_img = np.zeros(shape=(512,512,3),dtype=np.int16)
@@ -47,7 +47,7 @@ cv2.rectangle(blank_img,pt1=(100,45),pt2=(216,128),color=(20,170,180),thickness=
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_9](Figure_9.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_9.png]]
 ## 2. Drawing circle
 1. نفس خصائص بتاعت المستطيل في كل حاجة بس هتختلف فقط في parameters  و مش كلها
 	1. الصورة
@@ -62,7 +62,7 @@ cv2.circle(blank_img , center=(400,400) , radius=50 , color=(255,0,0), thickness
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_45 1](Figure_45%201.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_45 1.png]]
 ## 3. Drawing line
 1. نفس الكلام كذلك بتاع الاشكال الي فاتت زي المستطيل بالظبط بس الفرق ان النقط الي بتباصيها هي بداية و نهاية الخط 
 2. بس خلي بالك هنا السمك لو حطيت قيمة سالبة هيطلعلك ايرور لان اكيد ده ملهوش مساحة 
@@ -74,7 +74,7 @@ plt.imshow(blank_img)
 plt.show()
 ```
 
-![Figure_11](Figure_11.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_11.png]]
 ## 4. Drawing Text
 1. هو شبه بتاعت رسم الخط بس بتختلف في  parameters 
 	1. الصورة
@@ -93,7 +93,7 @@ cv2.putText(blank_img,text='Hello',org=(10,500), fontFace=font,fontScale= 4,colo
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_31](Figure_31.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_31.png]]
 ### addtion
 1. لو انت عايز تستخدم خطوط انت محملها و تتعامل مع الخط بشكل احسن في مكتبة اسمها Font  خد بالك من اسمها عشان في واحدة شبهها 
 2. خد بالك هتغير هي بردوا نسخ بتاعت opencv و numpy 
@@ -106,7 +106,7 @@ from Font.funcs import putTTFText
 import cv2
 ```
 4. هي func  بترجع مصفوفة الصورة وبتاخد parameters 
-![Pasted image 20250815204151](Pasted%20image%2020250815204151.png) 
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Pasted image 20250815204151.png]] 
 ```python
 renderedImage = putTTFText(blank_img, "Hello world!", (0, 512), r"D:\fonts\Blaka,Cairo,IBM_Plex_Sans_Arabic,Kufam,Lalezar,etc (4)\Cairo\Cairo-VariableFont_slnt,wght.ttf", 1000)
 #forth paramter for path , org for top left
@@ -117,17 +117,17 @@ plt.show()
 1. بنعمل array  بتحمل arrays  كل واحد حاملة احداثيات و كل واحدة بتمثل مكان الرأس بتاع الشكل بالبلدي عددهم بيساوي عدد الرؤوس او الاضلاع 
 2. هحتاج احولهم ل3 ابعاد عشان الصورة من 3 و هي سطمبة واحدة `(-1,1,2)`
 ```python
-vertices = np.array([100,300](100,300),dtype=np.int32)
+vertices = np.array([[100,300]],dtype=np.int32)
 pts = vertices.reshape((-1 , 1 ,2))
 print(pts.shape)
 print(pts)
 ```
 	Output:
 		(4, 1, 2)
-		[[100 300]([100%20300)
-		 [200 200](200%20200)
-		 [400 300](400%20300)
-		 [200 400](200%20400)]
+		[[[100 300]]
+		 [[200 200]]
+		 [[400 300]]
+		 [[200 400]]]
 3. يعد كده هتاخد parameters
 	1. الصورة
 	2. المصفوفة الي عملناها من 3 ابعاد هنحطها في [ ] 
@@ -138,31 +138,31 @@ print(pts)
 5. خلي بالك السمك مش بياخد قيم سالبة عشان تعمل fill
 ```python
 blank_img = np.zeros(shape=(512,512,3),dtype=np.int16)
-vertices = np.array([100,300](100,300),dtype=np.int32)
+vertices = np.array([[100,300]],dtype=np.int32)
 pts = vertices.reshape((-1 , 1 ,2))
 cv2.polylines(blank_img,pts=[pts],isClosed=True,color=(255,0,0),thickness=5)
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_43](Figure_43.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_43.png]]
 6. لو عايز اعمل fill للشكل ده في func بتعمل كده و ملهاش دعوة هي بالstroke
 ```python
-vertices = np.array([100,300](100,300),dtype=np.int32)
+vertices = np.array([[100,300]],dtype=np.int32)
 pts = vertices.reshape((-1 , 1 ,2))
 cv2.fillConvexPoly(blank_img, pts,color=(255,0,0))
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_32](Figure_32.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_32.png]]
 6. فا انت ممكن تعمل حركة حلوة انك تعمل polygone  ده ب thikness لون و بعد كده لما ترسم الpolygone  تاني بس fill  ختار لون تاني و هكذا
 ```python 
-vertices = np.array([100,300](100,300),dtype=np.int32)
+vertices = np.array([[100,300]],dtype=np.int32)
 pts = vertices.reshape((-1 , 1 ,2))
 cv2.polylines(blank_img,pts=[pts],isClosed=True,color=(255,255,255),thickness=6)
 cv2.fillConvexPoly(blank_img, pts,color=(255,0,0))
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_33](Figure_33.png)
+![[open cv/2-Image Basics with OpenCV/images_and_videos/Figure_33.png]]
 وده لينك دوكيمنتاشن لو عايز تعرف اكتر بس نشخة اقدم شوية 
 [Drawing Functions — OpenCV 3.0.0-dev documentation](https://docs.opencv.org/3.0-beta/modules/imgproc/doc/drawing_functions.html#fillpoly

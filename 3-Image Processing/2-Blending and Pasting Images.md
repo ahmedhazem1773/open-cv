@@ -1,4 +1,4 @@
-1. يعني ايه blending يعني انت تسيح صورتين علي بعض و تخلي واحدة فيهم اظهرة اكتر و هكذا و ده بيتم في func اسمها addweight  شبه بتاعت الشبكات العصبية الي بتبقي عن طريق weight و كده   ![Pasted image 20250816175734](Pasted%20image%2020250816175734.png)
+1. يعني ايه blending يعني انت تسيح صورتين علي بعض و تخلي واحدة فيهم اظهرة اكتر و هكذا و ده بيتم في func اسمها addweight  شبه بتاعت الشبكات العصبية الي بتبقي عن طريق weight و كده   ![[open cv/3-Image Processing/images_and_videos/Pasted image 20250816175734.png]]
 2. الالفا و البيتا دي قيم من صفر ل1 انت بتدد بيها اني صورة تظهر و كده و الجاما معرفش بتاعت ايه فا بنحطها صفر
 ## 1. if 2 images has same size
 1. اول حاجة هخلي الصورتين الي معايا قد بعض عشان نمشي النظرية
@@ -21,7 +21,7 @@ blended_img = cv2.addWeighted(src1=img_rgb,alpha=1,src2=water_mark_rgb,beta=0.2,
 plt.imshow(blended_img)
 plt.show()
 ```
-![Figure_12](Figure_12.png)
+![[open cv/3-Image Processing/images_and_videos/Figure_12.png]]
 ## 2. how to paste small image on large one
 1. الاول نحدد نقطة starting point بتاعت small_img الي هي top left  عشان دي المكان الي هتبدأ فيها الصورة الصغيرة
 2. نحدد النقطة bottom right  الي هتبقي جمع مقاسات الصورة الصغيرة علي starting point 
@@ -40,7 +40,7 @@ large_img[150:150+small_img.shape[0],500:500+small_img.shape[1]]=small_img
 plt.imshow(large_img)
 plt.show()
 ```
-![Figure_0](Figure_0.png)
+![[open cv/3-Image Processing/images_and_videos/Figure_0.png]]
 ## 3. How cut off part from img
 1. نفس الي عملناه نوعا ما بس العكس نحدد الجزء الي عايزينه و نحفظه في vari 
 ```python
@@ -50,7 +50,7 @@ cut_off= img_rgb[550:750, 600:800]
 plt.imshow(cut_off)
 plt.show()
 ```
-![Figure_01](Figure_01.png)
+![[open cv/3-Image Processing/images_and_videos/Figure_01.png]]
 ## 4. How to creat a mask
 1. خلي بالك الطريقة مع الحاجات الي فيهاش الوان كتير و الخلفية لونها مختلف و واحد 
 2. نحدد الحتة الي عايزين نحط عليها mask  ونعملها cut
@@ -99,11 +99,11 @@ large_img[800-384:800, 600:600+383]=added_imgs
 plt.imshow(large_img)
 plt.show() #image8
 ```
-![Figure_a](Figure_a.png)
-![Figure_b](Figure_b.png)
-![Figure_c](Figure_c.png)
-![Figure_d](Figure_d.png)
-![Figure_e](Figure_e.png)
-![Figure_f](Figure_f.png)
-![Figure_j](Figure_j.png)
-![Figure_i](Figure_i.png)
+![[open cv/3-Image Processing/images_and_videos/Figure_a.png]]
+![[open cv/3-Image Processing/images_and_videos/Figure_b.png]]
+![[open cv/3-Image Processing/images_and_videos/Figure_c.png]]
+![[open cv/3-Image Processing/images_and_videos/Figure_d.png]]
+![[open cv/3-Image Processing/images_and_videos/Figure_e.png]]
+![[open cv/3-Image Processing/images_and_videos/Figure_f.png]]
+![[open cv/3-Image Processing/images_and_videos/Figure_j.png]]
+![[open cv/3-Image Processing/images_and_videos/Figure_i.png]]

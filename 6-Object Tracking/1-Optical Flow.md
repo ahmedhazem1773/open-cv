@@ -231,4 +231,4 @@ cap.release()
 
 cv2.destroyAllWindows()
 ```
-![Recording 2025-08-23 175357](Recording%202025-08-23%20175357.mp4)
+![[open cv/6-Object Tracking/images_and_videos/Recording 2025-08-23 175357.mp4]]

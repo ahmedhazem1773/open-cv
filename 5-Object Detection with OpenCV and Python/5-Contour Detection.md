@@ -78,6 +78,6 @@ plt.imshow(image_internal , cmap="gray" )
 
 plt.show()
 ```
-![internal_external](internal_external.png)
-![Figure_78](Figure_78.png)
-![Figure_79](Figure_79.png)
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/internal_external.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_78.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_79.png]]

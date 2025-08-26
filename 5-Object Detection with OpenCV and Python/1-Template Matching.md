@@ -90,12 +90,12 @@ for m in methods:
     print('\n')
     print('\n')
 ```
-![Figure_59](Figure_59.png)
-![Figure_60](Figure_60.png)
-![Figure_61](Figure_61.png)
-![Figure_62](Figure_62.png)
-![Figure_63](Figure_63.png)
-![Figure_64](Figure_64.png)
-![Figure_65](Figure_65.png)
-![Figure_66](Figure_66.png)
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_59.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_60.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_61.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_62.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_63.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_64.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_65.png]]
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_66.png]]
 8.  دلوقتي شكل عندنا لو فيه كذا obj  نفس الشكل اكيد مش هينفع ندور علي اعلي قيمة عشان هتجيب صورة واحدة بس كده

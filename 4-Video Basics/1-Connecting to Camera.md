@@ -33,7 +33,7 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
-3. لو عايز بقي احفظ الstream كفيديو اشوف الpath الي عايز اوديه و بعد كده اسمه الفيديو او من غير path  و هيتحفظ في wd و بعد كده طلابقة الحفظ ليها كود معتمدة علي نوع os  بتاعك لو اوبنتو يبقي XVID لو ويندوز DIVX و ده لينك بيشرح codec  ده [Getting Started with Videos — OpenCV 3.0.0-dev documentation](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_gui/py_video_display/py_video_display.html#saving-a-video) و بعد كده عدد الفريمات في الثانية انت عايزه كام و بعد كده العرض و الطول الي انا عايزه
+3. لو عايز بقي احفظ الstream كفيديو اشوف الpath الي عايز اوديه و بعد كده اسمه الفيديو او من غير path  و هيتحفظ في wd و بعد كده طلابقة الحفظ ليها كود معتمدة علي نوع os  بتاعك لو اوبنتو يبقي XVID لو ويندوز DIVX و ده لينك بيشرح codec  ده [[https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_gui/py_video_display/py_video_display.html#saving-a-video]] و بعد كده عدد الفريمات في الثانية انت عايزه كام و بعد كده العرض و الطول الي انا عايزه
 ```python
 import cv2
 cap = cv2.VideoCapture(0)

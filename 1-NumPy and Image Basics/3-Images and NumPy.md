@@ -6,7 +6,7 @@
 pic = Image.open(r'C:\Users\EG.LAPTOP\Downloads\855b056d-e67e-4fa8-8de8-4c2402c43b92.jpeg')
 pic.show()
 ```
-![Pasted image 20250815171821](Pasted%20image%2020250815171821.png)
+![[open cv/1-NumPy and Image Basics/images_and_videos/Pasted image 20250815171821.png]]
 4. لو استخدمت `type()`func هيكتبلك نوع امتداد الصورة
 5. مكتبة numpy متعرفش تتعامل مع الصورة كده لازم نحولها لarray عن طريق
    `newarrayvari= np.asarray(imagevari)`
@@ -27,7 +27,7 @@ plt.show() #this will not run becuse there the closest one is plt.show()
 	(736, 736, 3)
 	بعد كده هتعرض الصورة بتاعتك في graph في عارض خاص بالمكتبة و الكود مش هيكمل شغل غير لما تقفل الصفحة دي 
 	ملاحظة: خلي بالك  plt.show() عشان هي بتشتغل علي اقرب plt.imshow(newarray) فوقيها لو قابلت اقرب حاجة كانت plt.show()  فا هي مش هتشتغل بس مش هتعمل ايرور
-![Screenshot 2025-08-15 165401](Screenshot%202025-08-15%20165401.png)
+![[open cv/1-NumPy and Image Basics/images_and_videos/Screenshot 2025-08-15 165401.png]]
 7. لو عايز اطلع الصورة في لون واحد بس اصفر اللونين التانيين لو طفيت لون واحد بس هتطلع الصورة ميكس ما بين درجات اللونين التانيين زي لو طفيت الاخضر هيطلع درجات من البنفسجي (دمج ما بين الازرق و الاحمر)
 ```python
 pic = Image.open(r"C:\Users\EG.LAPTOP\Downloads\WhatsApp Image 2025-08-13 at 20.14.36_568770bd.jpg")
@@ -38,7 +38,7 @@ red_array [: , : ,2] =0 #turn blue to zero for every pixel
 plt.imshow(red_array)
 plt.show()
 ```
-![Figurered](Figurered.png)
+![[open cv/1-NumPy and Image Basics/images_and_videos/Figurered.png]]
 8. لكن لو جيت استخدم slicing  عشان كده مش بصفر اللونين التانيين كده  هيطلع حاجة اسمها  pseudocolor ده نظام لوني المهم اقدر منه اطبق منه حاجة اسمها colormap  ده بيخليني زي اختار الثيم بتاع الصورة الالوان الي طابع عليها ايه لان انا كده بتعامل مع channel واحدة و نظام color map ده بيبقي من 0 ل255  زي مثلا gray scale لو انا حددت channel red  فا انا كده هعرف المناطق الفاتحة متشبعة باللون الاحمر و الغامقة قليل فيها اللون الاحمر و هكذا بقي مع colormaps بشوف الصفر بتاعها لونه ايه و 255 لونه ايه و اختار channel الي اتعامل معاه و كده و ده بيفيد  مثلا مع الناس الي عندها عمي الوان و تطبيقات اخري  
 9. اقدر ادي للgraph  ده عنوان  عن طريق mthod اسمها `plt.title("string")` و اكتبها ما بين `plt.im` و `plt.show`  
 10. اقدر كمان اطلع colorbar  يمثلي cmap  بتاعتي ان الصفر لونه ايه و 255 لونه ايه `plt.colorbar()` , الdefualt لو محددتش cmap للصورة هو  Viridis  و نفس النظام زي نقطة رقم 9 يتكتب فين 
@@ -51,4 +51,4 @@ plt.colorbar()
 plt.show()
 ```
 	note: cmap takes only keywords that builtin the library as string after more deep ,  u will be able creat your own colormap and give it name to use it with cmp 
-![Figure_2](Figure_2.png)
+![[open cv/1-NumPy and Image Basics/images_and_videos/Figure_2.png]]

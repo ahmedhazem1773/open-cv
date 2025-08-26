@@ -14,7 +14,7 @@ import numpy as np
 ```
    pip install pillow
 ```
-ده لينك الدوكيمنتايشن بتاعها [Tutorial - Pillow (PIL Fork) 11.3.0 documentation](https://pillow.readthedocs.io/en/stable/handbook/tutorial.html)
+ده لينك الدوكيمنتايشن بتاعها [[PIL Fork|Tutorial - Pillow (PIL Fork|[PIL Fork) 11.3.0 documentation]] 11.3.0 documentation]]%2011.3.0%20documentation)
 2. هنعمل import ليها اكيد عشان دي مكتبة و كده 
 3. بتخليك تتعامل مع الصور
 ```python

@@ -2,7 +2,7 @@
 2. هنستخدم جاوس فلتر عشان نشيل الnoise 
 3. هتلاقيها بتاخد 2 threshold هي بعد ما تستخدم sobel  بتعمل فلتر للedges الضعيفة الي ملهاش لازمة بحيث بتعمل ايه اي قيمة فوق upper threshold  ده strong edge  و ده معانا اي حاجة تحته مش تبعنا بس لما لاحظنا ان هو في بعض الedges هي ضعيفة نوعا ما بس تبعنا و من الحاجات المهمة فا  هنا يجي دور lower threshold  ان اي حاجة تحته مش محسوبة edge لينا لكن اي قيمة ما بين upper&lower هي دي فيها احتمالية ان هي تكون مهمة لينا فا هي بنحسبها هي معانا لو كانت متصلة مع نقط اعلي من  upper , ترتيب الparameters  الصورة بعد كدخ الlower  بعد كده الupper
 4. ممكن نضيف معادلة حسابية بتديك نقط threshold  كويسة تبدأ منها و انا بعد كده بالحس ازود ولا اقلل ان انت تجيب القيمة الي  تعتبر في النص ما بين القيم 
-![Pasted image 20250820214135](Pasted%20image%2020250820214135.png)
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Pasted image 20250820214135.png]]
 ```python
 import cv2
 import numpy as np
@@ -20,4 +20,4 @@ edges = cv2.Canny(image=blured_img, threshold1=lower , threshold2=upper+56)
 plt.imshow(edges )
 plt.show()
 ```
-![Figure_75](Figure_75.png)
+![[open cv/5-Object Detection with OpenCV and Python/images_and_videos/Figure_75.png]]
