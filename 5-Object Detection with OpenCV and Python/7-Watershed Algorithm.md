@@ -3,7 +3,7 @@
 3. ممكن يحصل زي merging  لحاجاتين مع بعض مع ان هم مش نفس  الشئ
 4. فا هنا يجي دور edge  يفصل الحاجات عن بعض 
 5. و بتستخد فصل الخلفية عن المقدمة في بعض الحالات الي بتبقي صعبة لبعض الخوارزميات زي مثلا coins كتير جنب بعض مثلا  لان مثلا ممكن خوارزيمة تشوفهم كلهم جسم واحد عشان الخلفية لونها مختلفة عنهم 
-![Pasted image 20250822161831](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Pasted%20image%2020250822161831.png)
+![Pasted image 20250822161831](Pasted%20image%2020250822161831.png)
 6. ممكن نستخدم seeds  خاصة بينا بحيث نوضح ان ده جسم لوحده و هكذا
 ## 1. Without watershed 
  1. اول حاجة نعمل بلور عشان نشيل الnoise و كمان نشيل تفاصيل مش مهمة لينا زي مثلا الصورة او الكتابة  الي علي العملة  هتلاحظ ان احنا استخدمنا كيرنيل مقاسها كبير عشان الصورة مقاسها كبير 
@@ -62,12 +62,12 @@ for i in range(len(contours)):
 
 display(sep_coins_rgb)
  ```
- ![Figure_85](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_85.png)
- ![Figure_86](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_86.png)
- ![Figure_87](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_87.png)
- ![Figure_88](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_88.png)
- ![Figure_89](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_89.png)
- ![Figure_90](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_90.png)
+ ![Figure_85](Figure_85.png)
+ ![Figure_86](Figure_86.png)
+ ![Figure_87](Figure_87.png)
+ ![Figure_88](Figure_88.png)
+ ![Figure_89](Figure_89.png)
+ ![Figure_90](Figure_90.png)
  5. لو خد بالك ان هنا قاريهم جسم واحد دي حاجة و الحاجة التانية ممكن تقولي استخدم erosion  عشان افصلهم بس المشكلة هيلعب عند ك في مساحة هتقل و التحديد هيبقي اصغر من المساحة
 ## 2. With Watershed
 1. هنعمل بردوا بلور 
@@ -75,7 +75,7 @@ display(sep_coins_rgb)
 3. بعد كده threshold  و بردوا binary_inv بس هتلاقي ممكن النتيجة مش كويسة فا هسنتخدم ميثود تانية اسمها ==Otsu==  هتلاقيها هي هي نفس الكود بس الفرق ان احنا هنخلي الthreshold  بيساوي صفر و هنيجي عندbinary_inv  نجمع عليها الكود ده `cv2.THRESHOLD_OTSU` 
 4. هنعمل خطوة اختيارية بس هي بتبقي مهمة في الصور الاكثر تعقيدا ان احنا نشيل الnoise عن طريق الmorphology  هنستخدم الopen هتحس ان مفيش فرق 
 5. هتلاقي المشكلة بتاعتنا ان هو شايف ان هم جزء واحد مع بعض فا  احنا هسنتخدم حاجة اسمها distance transform  هي بتعمل ايه لما تلاقي صورة الخلفية اسود و هي ابيض فا بتعمل في اللون الابيض تدرج فيه بحيث يبقي القلب هو الابيض و كل ما نبعد بنروح لللون الاسود هتلاقيها بتاخد  الصورة و طريقة الcalc  و رقم ليه علاقة بالماسك هتحط الdefault  الي هي يا 3 يا 5 
-![Pasted image 20250822192504](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Pasted%20image%2020250822192504.png)
+![Pasted image 20250822192504](Pasted%20image%2020250822192504.png)
 6. بعد كده هتستفاد من ده ان انا اعمل threshold  تاني عشان افصل الcoins  عن بعضها و  بس هتلاقيها تدي نقط صغيرة كده فا كده معايا الخلفية الي متأكد منها و الforeground  بس هستخدمهم عشان اجيب المساحات الغير معروفة عشان بعد كده اوقع markers  بحيث يعرف ان دي segments  مختلفة  و بعد كده اجمع الmarkers  دي مع الunknown area عشان الكمبيوتر مش عارف هي جسم واحد ولا لا  بحيث يبقي عندي الshape  لونه مختلف شوية عن الخلفية عشان كده ضيفت 1 للخلفية بتاعت markers  و الmarkers  لونها مختلف بردوا 
 7. بعد كده هستخدم watershed  ابصي فيها الصورة الاصلية بتاعتنا و  الصورة الي فيها بتاعت الmarkers  دي مع الunknown  ا  فايدة بان عملت markers  ان watershed  هتشتغل عشان تعرف ان دول 6 segments   مش واحد  ان هي تربطها بالصورة الاصلية زي ما اكانلي قولتلها خلي بالك 6 اجسام وانتي اتصرفي و خلي بالك انا لما بصيت الصورة بصيت الاصلية فا طلعت نتيجة كويسة علي عكس خوسيه كان باصي الصورة الي فيها بلور عالي فا الشكل طلع شوية بعافية
 8. بعد كده نستخدم الcontours و هي خلاص كده جابت ان هم 6 من غير ما نستخدم حتي نجيب الحدود الداخلية عشان مفيش 
@@ -165,15 +165,15 @@ for i in range(len(contours)):
 
 display(sep_coins_rgb)
 ```
-![Figure_91](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_91.png)
-![Figure_92](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_92.png)
-![Figure_93](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_93.png)
-![Figure_94](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_94.png)
-![Figure_95](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_95.png)
-![Figure_96](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_96.png)
-![Figure_97](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_97.png)
-![Figure_98](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_98.png)
-![Figure_99](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_99.png)
+![Figure_91](Figure_91.png)
+![Figure_92](Figure_92.png)
+![Figure_93](Figure_93.png)
+![Figure_94](Figure_94.png)
+![Figure_95](Figure_95.png)
+![Figure_96](Figure_96.png)
+![Figure_97](Figure_97.png)
+![Figure_98](Figure_98.png)
+![Figure_99](Figure_99.png)
 
  
  

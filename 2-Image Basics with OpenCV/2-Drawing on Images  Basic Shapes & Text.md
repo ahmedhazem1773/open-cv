@@ -5,7 +5,7 @@ blank_img = np.zeros(shape=(512,512,3),dtype=np.int16)
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figur](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figur.png)
+![Figur](Figur.png)
 3. ممكن اعملها بطريقة تانية لو عايزها حجم صورة معينة عن طريق func اسمها `np.full`
 4. هي بتاخد الابعاد فا هنباصي shape  بتاع الصورة الصليةو بعد كده  القيم  هنملاها ب0  الي هو الاs,] و بعد كده نوع الالوان هنختار `unit8` كده بقت خلفية بيضاء من 3channels  كلها 0 
 ```python
@@ -31,14 +31,14 @@ cv2.rectangle(blank_img,pt1=(384,45),pt2=(500,128),color=(0,0,255),thickness=6) 
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_3](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_3.png)
+![Figure_3](Figure_3.png)
 ```python
 blank_img = np.zeros(shape=(512,512,3),dtype=np.int16)
 cv2.rectangle(blank_img,pt1=(300,45),pt2=(416,128),color=(0,0,255),thickness=-1)
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_6](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_6.png)
+![Figure_6](Figure_6.png)
 4. تقدر كمان تطبقها اكتر مرة  و هي كده كده بتحفظ التغيرات اول باول و مش شرط التغيرات تكون ورا بعض لا عادي ممكن يكون في النص ما بينهم اكواد بس طبعا هتطبق علي لما يجي دورها في flow 
 ```python
 blank_img = np.zeros(shape=(512,512,3),dtype=np.int16)
@@ -47,7 +47,7 @@ cv2.rectangle(blank_img,pt1=(100,45),pt2=(216,128),color=(20,170,180),thickness=
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_9](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_9.png)
+![Figure_9](Figure_9.png)
 ## 2. Drawing circle
 1. نفس خصائص بتاعت المستطيل في كل حاجة بس هتختلف فقط في parameters  و مش كلها
 	1. الصورة
@@ -62,7 +62,7 @@ cv2.circle(blank_img , center=(400,400) , radius=50 , color=(255,0,0), thickness
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_45 1](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_45%201.png)
+![Figure_45 1](Figure_45%201.png)
 ## 3. Drawing line
 1. نفس الكلام كذلك بتاع الاشكال الي فاتت زي المستطيل بالظبط بس الفرق ان النقط الي بتباصيها هي بداية و نهاية الخط 
 2. بس خلي بالك هنا السمك لو حطيت قيمة سالبة هيطلعلك ايرور لان اكيد ده ملهوش مساحة 
@@ -74,7 +74,7 @@ plt.imshow(blank_img)
 plt.show()
 ```
 
-![Figure_11](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_11.png)
+![Figure_11](Figure_11.png)
 ## 4. Drawing Text
 1. هو شبه بتاعت رسم الخط بس بتختلف في  parameters 
 	1. الصورة
@@ -93,7 +93,7 @@ cv2.putText(blank_img,text='Hello',org=(10,500), fontFace=font,fontScale= 4,colo
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_31](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_31.png)
+![Figure_31](Figure_31.png)
 ### addtion
 1. لو انت عايز تستخدم خطوط انت محملها و تتعامل مع الخط بشكل احسن في مكتبة اسمها Font  خد بالك من اسمها عشان في واحدة شبهها 
 2. خد بالك هتغير هي بردوا نسخ بتاعت opencv و numpy 
@@ -106,7 +106,7 @@ from Font.funcs import putTTFText
 import cv2
 ```
 4. هي func  بترجع مصفوفة الصورة وبتاخد parameters 
-![Pasted image 20250815204151](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Pasted%20image%2020250815204151.png) 
+![Pasted image 20250815204151](Pasted%20image%2020250815204151.png) 
 ```python
 renderedImage = putTTFText(blank_img, "Hello world!", (0, 512), r"D:\fonts\Blaka,Cairo,IBM_Plex_Sans_Arabic,Kufam,Lalezar,etc (4)\Cairo\Cairo-VariableFont_slnt,wght.ttf", 1000)
 #forth paramter for path , org for top left
@@ -144,7 +144,7 @@ cv2.polylines(blank_img,pts=[pts],isClosed=True,color=(255,0,0),thickness=5)
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_43](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_43.png)
+![Figure_43](Figure_43.png)
 6. لو عايز اعمل fill للشكل ده في func بتعمل كده و ملهاش دعوة هي بالstroke
 ```python
 vertices = np.array([100,300](100,300),dtype=np.int32)
@@ -153,7 +153,7 @@ cv2.fillConvexPoly(blank_img, pts,color=(255,0,0))
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_32](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_32.png)
+![Figure_32](Figure_32.png)
 6. فا انت ممكن تعمل حركة حلوة انك تعمل polygone  ده ب thikness لون و بعد كده لما ترسم الpolygone  تاني بس fill  ختار لون تاني و هكذا
 ```python 
 vertices = np.array([100,300](100,300),dtype=np.int32)
@@ -163,6 +163,6 @@ cv2.fillConvexPoly(blank_img, pts,color=(255,0,0))
 plt.imshow(blank_img)
 plt.show()
 ```
-![Figure_33](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Figure_33.png)
+![Figure_33](Figure_33.png)
 وده لينك دوكيمنتاشن لو عايز تعرف اكتر بس نشخة اقدم شوية 
 [Drawing Functions — OpenCV 3.0.0-dev documentation](https://docs.opencv.org/3.0-beta/modules/imgproc/doc/drawing_functions.html#fillpoly

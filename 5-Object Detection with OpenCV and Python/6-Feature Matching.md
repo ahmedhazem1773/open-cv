@@ -1,6 +1,6 @@
 1. من دلوقتي هنطبق اغلب الي اتعلمناه 
 2. هنستخدم حاجة من 3 methodes الي جايين
-![Pasted image 20250821142416](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Pasted%20image%2020250821142416.png)
+![Pasted image 20250821142416](Pasted%20image%2020250821142416.png)
 3. هنا هتلاقي مش لازم الصورة تكون هي هي تماما بالظبط عشان اعرف ادور و كده 
 4. هي العملية بتتم ازاي اصلا احنا بنستخد حاجات اسمها feature ectraction دي methodes  بتقعد بتدور في الصورة عموما عن features  زي edges , corners , etc و وصف بتاع feature  الزاوية بتاعتها و مكانه و هكذا و ده اسمه descriptors و بعد كده بعد ما نطبق ده عي صورتين بنعمل بعد كدهcomparing  ما بين الfeature في الصورتين بحيث نعمل matching
 ## 1. Brute Force Detection with ORB Descriptors
@@ -77,8 +77,8 @@ plt.imshow(reeses_matches)
 
 plt.show()
 ```
-![Figure_81](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_81.png)
-![Figure_80](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_80.png)
+![Figure_81](Figure_81.png)
+![Figure_80](Figure_80.png)
 ![Figure_82 2.png](Figure_82%202.png)
 ## 2. Brute-Force Matching with SIFT Descriptors and Ratio Test
 1. هي بتشتغل كويس مع الحاجات ال في منها scale  و بتاع 
@@ -181,6 +181,6 @@ plt.imshow(flann_matches)
 
 plt.show()
 ```
-![Figure_84](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_84.png)
+![Figure_84](Figure_84.png)
 ## 4. extra
 1. هتلاقي ناس بتحب تعمل ايه بقي تلون الfeatures  الي مش معمولها matching  بلون تاني عن طريق الماسك و محتاج ارجع ليهم تاني عشان مكسل اكتبهم  

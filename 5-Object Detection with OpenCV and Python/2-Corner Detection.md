@@ -73,13 +73,13 @@ plt.imshow(real_chess)
 
 plt.show()
 ```
-![flat_chessboard](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/flat_chessboard.png)
-![Figure_67](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_67.png)
-![Figure_68](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_68.png)
-![Figure_69](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_69.png)
-![Figure_70](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_70.png)
-![Figure_71](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_71.png)
-![Figure_72](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_72.png)
+![flat_chessboard](flat_chessboard.png)
+![Figure_67](Figure_67.png)
+![Figure_68](Figure_68.png)
+![Figure_69](Figure_69.png)
+![Figure_70](Figure_70.png)
+![Figure_71](Figure_71.png)
+![Figure_72](Figure_72.png)
 
 
 ## 2. ShiTomasi Detection
@@ -94,7 +94,7 @@ plt.show()
 5. هتلاحظ ان احنا مستخدمين func  اسمه `ravel` دي بتعمل زي flat للarray بتخليها في بعد واحد 
 6. هنحول القيم من float ل int 
 7. لو خد بالك ان هي بترجع الابعاد في قوسين مش قوس واحد لما نعمل iteration فا هي ravel بتخليها قوس واحد مش اتنين  زي ما واضح ازاي الاحداثيات محطوطة في قوسين
-![Pasted image 20250820204924](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Pasted%20image%2020250820204924.png)
+![Pasted image 20250820204924](Pasted%20image%2020250820204924.png)
 ```python
 flat_chess = cv2.imread(r"D:\udemy\open cv\Udemy - Python for Computer Vision with OpenCV and Deep Learning 2021-3\1 - Course Overview and Introduction\Computer-Vision-with-Python\DATA\flat_chessboard.png")
 flat_chess = cv2.cvtColor(flat_chess,cv2.COLOR_BGR2RGB)
@@ -123,7 +123,7 @@ for i in corners2:
 plt.imshow(real_chess)
 plt.show()
 ```
-![Figure_67 1](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_67%201.png)
-![Figure_68 1](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_68%201.png)
+![Figure_67 1](Figure_67%201.png)
+![Figure_68 1](Figure_68%201.png)
 
 

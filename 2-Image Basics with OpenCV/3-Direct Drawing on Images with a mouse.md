@@ -54,7 +54,7 @@ while True: #Runs forever until we break with Esc key on keyboard
 
 cv2.destroyAllWindows()
 ```
-![Pasted image 20250816135855](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/Pasted%20image%2020250816135855.png)
+![Pasted image 20250816135855](Pasted%20image%2020250816135855.png)
 9. خلي بالك انك ممكن نعمل مستطيل بال drag  بالماوس عن طريق الlogic  ده 
 10. بس للاسف هتلاحظ ان بيقعد يعمل نسخ كتير تح النسخ الي بتعملها و هتلاحظ ده لو حركت الماوس في اتجاه غير المفترض فيه و مينفعش مثلا لو حركت ايديك جامد و عايز يكون الحجم صغير خلاص مش هتشوف ده (النص الشمال هتلاحظ ده و اخر واحدة في النص اليمين)
 ```python
@@ -102,5 +102,5 @@ def draw_rectangle(event,x,y,flags,param):
 
         cv2.rectangle(img,(ix,iy),(x,y),(0,255,0),-1)
 ```
-![20250816-1138-05.1889909](open%20cv/2-Image%20Basics%20with%20OpenCV/images%20&%20videos/20250816-1138-05.1889909.mp4)
+![20250816-1138-05.1889909](20250816-1138-05.1889909.mp4)
  
