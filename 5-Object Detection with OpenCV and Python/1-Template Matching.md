@@ -90,12 +90,12 @@ for m in methods:
     print('\n')
     print('\n')
 ```
-![[Figure_59.png]]
-![[Figure_60.png]]
-![[Figure_61.png]]
-![[Figure_62.png]]
-![[Figure_63.png]]
-![[Figure_64.png]]
-![[Figure_65.png]]
-![[Figure_66.png]]
+![Figure_59](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_59.png)
+![Figure_60](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_60.png)
+![Figure_61](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_61.png)
+![Figure_62](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_62.png)
+![Figure_63](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_63.png)
+![Figure_64](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_64.png)
+![Figure_65](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_65.png)
+![Figure_66](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_66.png)
 8.  دلوقتي شكل عندنا لو فيه كذا obj  نفس الشكل اكيد مش هينفع ندور علي اعلي قيمة عشان هتجيب صورة واحدة بس كده

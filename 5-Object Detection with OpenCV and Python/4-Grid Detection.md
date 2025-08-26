@@ -11,7 +11,7 @@ cv2.drawChessboardCorners(flat_chess_copy, (7, 7), corners, found)
 plt.imshow(flat_chess_copy)
 plt.show()
 ```
-![[Figure_76.png]]
+![Figure_76](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_76.png)
 5. دلوقتي هنتكلم عن pattern عبارة عن نقط او كور هي هي نفس الي فات بس الفرق في الfunc الاولي بتاخد ايه نفس الparameters بس زيادة واحد ان انت تحدد الmethode الي هيمشي بيها
 ```python
 dots = cv2.imread(r"D:\udemy\open cv\Udemy - Python for Computer Vision with OpenCV and Deep Learning 2021-3\1 - Course Overview and Introduction\Computer-Vision-with-Python\DATA\dot_grid.png")
@@ -26,4 +26,4 @@ plt.imshow(dbg_image_circles)
 
 plt.show()
 ```
-![[Figure_77.png]]
+![Figure_77](open%20cv/5-Object%20Detection%20with%20OpenCV%20and%20Python/images%20&%20videos/Figure_77.png)
